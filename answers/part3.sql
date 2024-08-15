@@ -62,3 +62,32 @@ WHERE t.name = "Poison";
 
 
 * What are all the primary types and how many pokemon have that type?
+mysql> SELECT t.name AS primary_type, COUNT(p.id) AS pokemon_count
+    -> FROM pokemons p
+    -> JOIN types t ON p.primary_type = t.id
+    -> GROUP BY t.name;
++--------------+---------------+
+| primary_type | pokemon_count |
++--------------+---------------+
+| Normal       |            90 |
+| Water        |            95 |
+| Grass        |            59 |
+| Rock         |            38 |
+| Fire         |            38 |
+| Ground       |            29 |
+| Poison       |            27 |
+| Bug          |            61 |
+| Electric     |            35 |
+| Dragon       |            22 |
+| Steel        |            19 |
+| Dark         |            24 |
+| Fighting     |            25 |
+| Psychic      |            38 |
+| Ghost        |            19 |
+| Fairy        |            14 |
+| Ice          |            22 |
+| Flying       |             1 |
++--------------+---------------+
+
+
+
