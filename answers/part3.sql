@@ -91,3 +91,4 @@ mysql> SELECT t.name AS primary_type, COUNT(p.id) AS pokemon_count
 
 
 How many pokemon at level 100 does each trainer with at least one level 100 pokemone have?
+--
